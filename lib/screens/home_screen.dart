@@ -1,3 +1,4 @@
+import 'package:design_app/screens/feed_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,14 +26,14 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        scrollDirection:Axis.horizontal,
-        child: Column(
-          children: [
-            Divider(
-              color: Colors.white,
-            ),
-            Row(
+      body: Column(
+        children: [
+          Divider(
+            color: Colors.white,
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
               children: [
                 buildStory('https://wallpapercave.com/wp/wp5048074.jpg'),
                 buildStory(
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                 buildStory(
                     'https://s2.best-wallpaper.net/wallpaper/5120x2880/1902/Smile-Asian-girl-walking-on-the-railroad_5120x2880.jpg'),
                 buildStory(
-                    'https://lh3.googleusercontent.com/proxy/0iUpPS5LyvLupgqwP67oXP6-l8Nani8qNIazl2IafoBNu_u9m_J6ujbqlIsWVPFozYUY5YMICPhwqlf4kfxavbaYPOzLcSvIc24Jsp-4Z8DmtrTqYM16c0sHh1898_JxiAlDUA'),
+                    'https://lh3.googleusercontent.com/proxy/ZGsEWN3h_RzoDPtYGYrSZNX9RFlwKmb6FHfHRa095Y28vjZ1ZkSgaNS7DN1coCajDcTRvLDqQlQyxWxMhMlBHnxz-3VQnvLo9G74MHs4KB18-lkkx09sVdcg'),
                 buildStory(
                     'https://s2.best-wallpaper.net/wallpaper/5120x2880/1812/Asian-girl-use-camera-reeds_5120x2880.jpg'),
                 buildStory(
@@ -54,9 +55,13 @@ class _HomePageState extends State<HomePage> {
                 buildStory(
                     'https://socialtelecast.com/wp-content/uploads/2021/02/Propose-Day-images-2021.jpg'),
               ],
-            )
-          ],
-        ),
+            ),
+          ),
+          Divider(
+            color: Colors.white,
+          ),
+          FeedWidget(),
+        ],
       ),
     );
   }
