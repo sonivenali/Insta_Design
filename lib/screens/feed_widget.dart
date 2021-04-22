@@ -8,6 +8,29 @@ class FeedWidget extends StatefulWidget {
 class _FeedWidgetState extends State<FeedWidget> {
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        buildFeed(
+            "https://freedesignfile.com/upload/2017/01/Handsome-man-HD-picture-09.jpg",
+            "John",
+            "http://c.files.bbci.co.uk/55CB/production/_117636912_gettyimages-1231727932.jpg",
+            "421 Likes"),
+        buildFeed(
+            "https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/hug-kiss-images.jpg",
+              "gloria",
+            "https://wallpaperaccess.com/full/26984.jpg",
+            "922 Likes"),
+        buildFeed(
+            "https://images.all-free-download.com/images/graphicthumb/man_in_the_hat_202625.jpg",
+            "ali",
+            "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "156 Likes"),
+      ],
+    );
+
+  }
+
+  Padding buildFeed(String profilePhoto, profileName, post, likes) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -16,7 +39,7 @@ class _FeedWidgetState extends State<FeedWidget> {
             children: [
               ClipOval(
                 child: Image.network(
-                  "http://c.files.bbci.co.uk/55CB/production/_117636912_gettyimages-1231727932.jpg",
+                  profilePhoto,
                   width: 60,
                   height: 60,
                   fit: BoxFit.cover,
@@ -25,7 +48,7 @@ class _FeedWidgetState extends State<FeedWidget> {
               Padding(
                 padding: const EdgeInsets.only(left: 14),
                 child: Text(
-                  "John",
+                  profileName,
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
@@ -46,33 +69,27 @@ class _FeedWidgetState extends State<FeedWidget> {
           Padding(
             padding: const EdgeInsets.only(top: 16),
             child: Image.network(
-              "http://c.files.bbci.co.uk/55CB/production/_117636912_gettyimages-1231727932.jpg",
+              post,
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 14, left: 8),
-            child: Stack(
+            child: Row(
               children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.favorite_border,
-                      color: Colors.white,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Text(
-                        "421 Likes",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    Positioned(
-                        right: 0,
-                        child: Icon(
-                          Icons.more_vert,
-                          color: Colors.white,
-                        )),
-                  ],
+                Icon(
+                  Icons.favorite_border,
+                  color: Colors.white,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Text(
+                    likes,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Icon(
+                  Icons.more_vert,
+                  color: Colors.white,
                 ),
               ],
             ),
@@ -82,3 +99,4 @@ class _FeedWidgetState extends State<FeedWidget> {
     );
   }
 }
+

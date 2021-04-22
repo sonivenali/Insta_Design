@@ -26,42 +26,44 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Divider(
-            color: Colors.white,
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                buildStory('https://wallpapercave.com/wp/wp5048074.jpg'),
-                buildStory(
-                    'https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/hug-kiss-images.jpg'),
-                buildStory(
-                    'https://s2.best-wallpaper.net/wallpaper/5120x2880/1902/Smile-Asian-girl-walking-on-the-railroad_5120x2880.jpg'),
-                buildStory(
-                    'https://lh3.googleusercontent.com/proxy/ZGsEWN3h_RzoDPtYGYrSZNX9RFlwKmb6FHfHRa095Y28vjZ1ZkSgaNS7DN1coCajDcTRvLDqQlQyxWxMhMlBHnxz-3VQnvLo9G74MHs4KB18-lkkx09sVdcg'),
-                buildStory(
-                    'https://s2.best-wallpaper.net/wallpaper/5120x2880/1812/Asian-girl-use-camera-reeds_5120x2880.jpg'),
-                buildStory(
-                    'https://www.colesclassroom.com/wp-content/uploads/2019/08/beautiful-blur-blurred-background-733872.jpg'),
-                buildStory(
-                    'https://c.files.bbci.co.uk/55CB/production/_117636912_gettyimages-1231727932.jpg'),
-                buildStory(
-                    'https://killerattitudestatus.in/wp-content/uploads/2019/12/gud-night-images.jpg'),
-                buildStory(
-                    'https://www.filmibeat.com/imgm/416x335x100/2021/04/janhvi-kapoor-hot-pics_16179436437.jpg'),
-                buildStory(
-                    'https://socialtelecast.com/wp-content/uploads/2021/02/Propose-Day-images-2021.jpg'),
-              ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Divider(
+              color: Colors.grey,
             ),
-          ),
-          Divider(
-            color: Colors.white,
-          ),
-          FeedWidget(),
-        ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  buildStory('https://wallpapercave.com/wp/wp5048074.jpg'),
+                  buildStory(
+                      'https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/hug-kiss-images.jpg'),
+                  buildStory(
+                      'https://s2.best-wallpaper.net/wallpaper/5120x2880/1902/Smile-Asian-girl-walking-on-the-railroad_5120x2880.jpg'),
+                  buildStory(
+                      'https://lh3.googleusercontent.com/proxy/ZGsEWN3h_RzoDPtYGYrSZNX9RFlwKmb6FHfHRa095Y28vjZ1ZkSgaNS7DN1coCajDcTRvLDqQlQyxWxMhMlBHnxz-3VQnvLo9G74MHs4KB18-lkkx09sVdcg'),
+                  buildStory(
+                      'https://s2.best-wallpaper.net/wallpaper/5120x2880/1812/Asian-girl-use-camera-reeds_5120x2880.jpg'),
+                  buildStory(
+                      'https://www.colesclassroom.com/wp-content/uploads/2019/08/beautiful-blur-blurred-background-733872.jpg'),
+                  buildStory(
+                      'https://c.files.bbci.co.uk/55CB/production/_117636912_gettyimages-1231727932.jpg'),
+                  buildStory(
+                      'https://killerattitudestatus.in/wp-content/uploads/2019/12/gud-night-images.jpg'),
+                  buildStory(
+                      'https://www.filmibeat.com/imgm/416x335x100/2021/04/janhvi-kapoor-hot-pics_16179436437.jpg'),
+                  buildStory(
+                      'https://socialtelecast.com/wp-content/uploads/2021/02/Propose-Day-images-2021.jpg'),
+                ],
+              ),
+            ),
+            Divider(
+              color: Colors.grey,
+            ),
+            FeedWidget(),
+          ],
+        ),
       ),
     );
   }
