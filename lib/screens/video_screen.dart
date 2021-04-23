@@ -51,18 +51,4 @@ class _VideoScreenState extends State<VideoScreen> {
       )),
     );
   }
-/*
-  AppBar(
-        centerTitle: false,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text("Reels"),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 8),
-            child: Icon(Icons.camera_alt_outlined),
-          ),
-        ],
-      )
-   */
 }
