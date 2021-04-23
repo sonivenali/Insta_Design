@@ -16,9 +16,11 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: Icon(Icons.camera_alt_outlined),
-        title: Text(
-          "Hashtagram",
-          style: GoogleFonts.lora(color: Colors.white),
+        title: Center(
+          child: Text(
+            "Hashtagram",
+            style: GoogleFonts.lora(color: Colors.white),
+          ),
         ),
         actions: [
           Padding(
