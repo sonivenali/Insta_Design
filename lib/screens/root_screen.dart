@@ -31,13 +31,13 @@ class _RootScreenState extends State<RootScreen> {
           setState(() {
             currentTab = index;
           });
-        },
+        },iconSize: 30,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.search,), label: "",),
           BottomNavigationBarItem(
               icon: Icon(Icons.movie_creation_outlined), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: ""),

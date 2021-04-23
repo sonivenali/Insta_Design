@@ -23,6 +23,11 @@ class _SearchScreenState extends State<SearchScreen> {
     "https://www.filmibeat.com/imgm/416x335x100/2021/04/janhvi-kapoor-hot-pics_161794364310.jpg",
     "https://i.pinimg.com/originals/87/26/ff/8726ff3556a8edb54088c0bf5c48af60.gif",
     "https://killerattitudestatus.in/wp-content/uploads/2019/12/gud-night-images.jpg",
+    "https://html5box.com/html5gallery/images/Waves_1024.jpg",
+    "https://images.all-free-download.com/images/graphicthumb/hd_picture_of_the_beautiful_natural_scenery_03_166249.jpg",
+    "https://i.pinimg.com/originals/87/26/ff/8726ff3556a8edb54088c0bf5c48af60.gif",
+    "https://killerattitudestatus.in/wp-content/uploads/2019/12/gud-night-images.jpg",
+    "https://media.istockphoto.com/photos/pakistan-monument-islamabad-picture-id535695503?k=6&m=535695503&s=612x612&w=0&h=uP8aDK4xlfjk3kEiyr9wwUiuh80UwAiICweFpiBDosk=",
 
   ];
 
@@ -63,6 +68,8 @@ class _SearchScreenState extends State<SearchScreen> {
           GridView.count(
             crossAxisCount: 3,
             shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.only(top: 12),
             children: imageList.map((link) => buildImage(link)).toList(),
           ),
         ],
