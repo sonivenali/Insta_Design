@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoScreen extends StatefulWidget {
@@ -34,10 +35,14 @@ class _VideoScreenState extends State<VideoScreen> {
                 )
               : Container(),
           Padding(
-            padding: const EdgeInsets.only(left: 16,right: 16,top: 8),
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Reels",style: TextStyle(),),
+                Text(
+                  "Reels",
+                  style: GoogleFonts.lato(color: Colors.white, fontSize: 18),
+                ),
                 Icon(Icons.camera_alt_outlined),
               ],
             ),
