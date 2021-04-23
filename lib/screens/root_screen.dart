@@ -1,3 +1,8 @@
+import 'package:design_app/screens/home_screen.dart';
+import 'package:design_app/screens/notification_screen.dart';
+import 'package:design_app/screens/profile_screen.dart';
+import 'package:design_app/screens/search_screen.dart';
+import 'package:design_app/screens/video_screen.dart';
 import 'package:flutter/material.dart';
 
 class RootScreen extends StatefulWidget {
@@ -7,6 +12,14 @@ class RootScreen extends StatefulWidget {
 
 class _RootScreenState extends State<RootScreen> {
   int currentTab = 0;
+
+  final tabs = [
+    HomeScreen(),
+    SearchScreen(),
+    VideoScreen(),
+    NotificationScreen(),
+    ProfileScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +45,7 @@ class _RootScreenState extends State<RootScreen> {
               icon: Icon(Icons.account_circle_outlined), label: "")
         ],
       ),
+      body: tabs[currentTab],
     );
   }
 }

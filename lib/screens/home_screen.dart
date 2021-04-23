@@ -1,5 +1,6 @@
 import 'package:design_app/screens/feed_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Icon(Icons.camera_alt_outlined),
         title: Text(
           "Hashtagram",
-          style: TextStyle(color: Colors.white),
+          style: GoogleFonts.lora(color: Colors.white),
         ),
         actions: [
           Padding(

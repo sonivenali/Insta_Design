@@ -11,7 +11,8 @@ class DesignApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark()
+          .copyWith(primaryColor: Colors.blue, accentColor: Colors.blue),
       home: RootScreen(),
     );
   }
