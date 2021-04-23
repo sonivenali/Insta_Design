@@ -1,12 +1,12 @@
 import 'package:design_app/screens/feed_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   buildStory(
                       'https://s2.best-wallpaper.net/wallpaper/5120x2880/1902/Smile-Asian-girl-walking-on-the-railroad_5120x2880.jpg'),
                   buildStory(
-                      'https://lh3.googleusercontent.com/proxy/ZGsEWN3h_RzoDPtYGYrSZNX9RFlwKmb6FHfHRa095Y28vjZ1ZkSgaNS7DN1coCajDcTRvLDqQlQyxWxMhMlBHnxz-3VQnvLo9G74MHs4KB18-lkkx09sVdcg'),
+                      'https://www.filmibeat.com/imgm/416x335x100/2021/04/janhvi-kapoor-hot-pics_161794364310.jpg'),
                   buildStory(
                       'https://s2.best-wallpaper.net/wallpaper/5120x2880/1812/Asian-girl-use-camera-reeds_5120x2880.jpg'),
                   buildStory(

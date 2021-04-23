@@ -1,4 +1,5 @@
 import 'package:design_app/screens/home_screen.dart';
+import 'package:design_app/screens/root_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,8 @@ class DesignApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData.dark(),
+      home: RootScreen(),
     );
   }
 }
