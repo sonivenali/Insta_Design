@@ -72,8 +72,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         ),
                         Text(
                           "Approve or ignore requests",
-                          style:
-                              GoogleFonts.lato(color: Colors.grey, fontSize: 15),
+                          style: GoogleFonts.lato(
+                              color: Colors.grey, fontSize: 15),
                         ),
                       ],
                     ),
