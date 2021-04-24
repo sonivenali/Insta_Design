@@ -8,7 +8,6 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-
     final imageList = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVeXmmgy4UHViI1nvK0X5Mddk3b_Kx9hkEug&usqp=CAU",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
@@ -31,7 +30,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
       "https://i.pinimg.com/originals/87/26/ff/8726ff3556a8edb54088c0bf5c48af60.gif",
       "https://killerattitudestatus.in/wp-content/uploads/2019/12/gud-night-images.jpg",
       "https://media.istockphoto.com/photos/pakistan-monument-islamabad-picture-id535695503?k=6&m=535695503&s=612x612&w=0&h=uP8aDK4xlfjk3kEiyr9wwUiuh80UwAiICweFpiBDosk=",
-
     ];
 
     return Scaffold(
@@ -157,12 +155,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16,left: 30,right: 30),
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              padding: const EdgeInsets.only(top: 16, left: 30, right: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.widgets_outlined,color: Colors.grey,),
-                  Icon(Icons.live_tv_outlined,color: Colors.grey,),
-                  Icon(Icons.person_pin_outlined,color: Colors.grey,)
+                  Icon(
+                    Icons.widgets_outlined,
+                    color: Colors.grey,
+                  ),
+                  Icon(
+                    Icons.live_tv_outlined,
+                    color: Colors.grey,
+                  ),
+                  Icon(
+                    Icons.person_pin_outlined,
+                    color: Colors.grey,
+                  )
                 ],
               ),
             ),
@@ -197,7 +205,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ],
     );
   }
-
 
   Widget buildImage(String image) {
     return Padding(
