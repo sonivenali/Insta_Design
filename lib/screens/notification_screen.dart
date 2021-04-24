@@ -20,6 +20,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 8),
@@ -63,22 +64,152 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     children: [
                       Text(
                         "Follow Requests",
-                        style: GoogleFonts.lato(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w700
-                        ),
+                        style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700),
                       ),
                       Text(
                         "Approve or ignore requests",
-                        style: GoogleFonts.lato(color: Colors.grey,fontSize: 15),
+                        style:
+                            GoogleFonts.lato(color: Colors.grey, fontSize: 15),
                       ),
                     ],
                   ),
                 )
               ],
             ),
-          )
+          ),
+          Divider(),
+          Padding(
+            padding: const EdgeInsets.only(top: 8, left: 14, bottom: 8),
+            child: Text(
+              "Today",
+              style: GoogleFonts.lato(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700),
+            ),
+          ),
+          buildRequest("https://c.files.bbci.co.uk/55CB/production/_117636912_gettyimages-1231727932.jpg","mehak.mehta"),
+          buildLiked( "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg","Prince_malik","https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"),
         ],
       ),
     );
   }
-}
 
+  Padding buildLiked(String imageLink, name, post) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 8,
+        top: 8,
+      ),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            CircleAvatar(
+                radius: 20,
+                backgroundColor: Colors.white,
+                backgroundImage: Image.network(
+                 imageLink,
+                  width: 30,
+                  height: 30,
+                  fit: BoxFit.cover,
+                ).image),
+            Padding(
+              padding: const EdgeInsets.only(left: 8, right: 4),
+              child: Text(
+                name,
+                style: GoogleFonts.lato(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+            Text(
+              "liked your photo.",
+              style: GoogleFonts.lato(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Image.network(
+                post,
+                height: 60,
+                width: 60,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Padding buildRequest(String profileLink, name,) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 8,
+        top: 8,
+      ),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            CircleAvatar(
+                radius: 20,
+                backgroundColor: Colors.white,
+                backgroundImage: Image.network(
+                  profileLink,
+                  width: 30,
+                  height: 30,
+                  fit: BoxFit.cover,
+                ).image),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    name,
+                    style: GoogleFonts.lato(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  Text(
+                    "Requested to follow.",
+                    style: GoogleFonts.lato(color: Colors.white, fontSize: 13),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 4, left: 4),
+              child: FlatButton(
+                padding: EdgeInsets.zero,
+                height: 28,
+                onPressed: () {},
+                child: Text("Confi.."),
+                color: Colors.blue,
+              ),
+            ),
+            SizedBox(
+              height: 28,
+              child: OutlineButton(
+                padding: EdgeInsets.zero,
+                borderSide: BorderSide(color: Colors.white),
+                onPressed: () {},
+                child: Text(
+                  "Delete",
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
