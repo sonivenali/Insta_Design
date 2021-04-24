@@ -23,7 +23,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ],
       ),
-
+      body: Column(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, top: 8),
+                  child: CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.white,
+                      backgroundImage: Image.network(
+                        "https://www.filmibeat.com/imgm/416x335x100/2021/04/janhvi-kapoor-hot-pics_161794364310.jpg",
+                        width: 60,
+                        height: 60,
+                        fit: BoxFit.cover,
+                      ).image),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30, right: 25),
+                  child: Text(
+                    "491\nPosts",textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
+                ),
+                Text(
+                  "211\nFollowers",textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Text(
+                    "192\nFollowing",textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
