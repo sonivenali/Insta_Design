@@ -75,16 +75,73 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 16,right: 16,top: 14),
-            child: SizedBox(width: MediaQuery.of(context).size.width,height: 30,
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 14),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 30,
               child: OutlineButton(
                 onPressed: () {},
                 child: Text("Edit Profile"),
               ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 14,left: 8),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        buildStory(
+                            'https://img.emg-services.net/HtmlPages/HtmlPage4239/switzerland-header-2.jpg',"Switzerland"),
+                        buildStory(
+                            'https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg',"Japan"),
+                        buildStory(
+                            'https://azgovernor.gov/sites/default/files/londs_0.jpg',"London"),
+                        buildStory(
+                            'https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/large_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900',"Paris"),
+                        buildStory(
+                            'https://static.toiimg.com/photo/77757963.cms',"New York"),
+                        buildStory(
+                            'https://static.toiimg.com/photo/75404966.cms',"Italy"),
+                        buildStory(
+                            'https://thecommonwealth.org/sites/default/files/styles/press_release_large/public/images/hero/taj-mahal-620.jpg?itok=PKSpaEMm',"India"),
+                        buildStory(
+                            'https://www.studying-in-germany.org/wp-content/uploads/2018/07/German-Culture-and-Traditions.jpg',"Germany"),
+                        buildStory(
+                            'https://www.filmibeat.com/imgm/416x335x100/2021/04/janhvi-kapoor-hot-pics_16179436437.jpg',"Algeria"),
+                        buildStory(
+                            'https://socialtelecast.com/wp-content/uploads/2021/02/Propose-Day-images-2021.jpg',"Mexico"),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
+    );
+  }
+
+  Widget buildStory(String imageLink, name) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ClipOval(
+            child: Image.network(
+              imageLink,
+              width: 60,
+              height: 60,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Text(name),
+      ],
     );
   }
 }
